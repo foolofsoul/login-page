@@ -15,7 +15,7 @@
 
 //   - Create error and success container and messages on login screen.
 
-// var loginApp = (function(){
+var loginApp = (function(){
 
   var database = [
     {
@@ -88,7 +88,7 @@
       }
 
       if ( loggedIn ) {
-        console.log(username.value + " has successfully logged in.");
+        form.innerHTML = '<div class="login-success">' + username.value + " has successfully logged in.</div>";
       } else if ( username.value === "" || password.value === "") {
         message.textContent = "Please enter a username and password.";
         errorMsg();
@@ -174,4 +174,4 @@
   bindEvents();
   
 
-// })();
+})();
